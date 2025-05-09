@@ -35,6 +35,10 @@ app.get('/secret-page', (req,res) => {
     loadPage(res, 'secret-page')
 });
 
+app.get('/checkout', (req,res) => {
+    loadPage(res, 'checkout')
+});
+
 app.use((req,res) => {
     res.redirect('/home-page');
 });

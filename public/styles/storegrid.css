@@ -1,0 +1,10 @@
+.container {
+    text-align: center;
+    display: grid;
+}
+
+.container button {
+    text-align: center;
+    width: 200px;
+    height: 50px;
+}
