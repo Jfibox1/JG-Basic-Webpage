@@ -4,7 +4,7 @@ const app = express();
 const PORT = 4000;
 
 function loadPage(res, page) {
-    fs.readFile(page + ".html", function(err, data) {
+    fs.readFile("./Webpages/" +  page + ".html", function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(data);
         
