@@ -1,10 +1,13 @@
 import express from 'express';
 import fs from 'fs';
+import path from 'path';
 const app = express();
 const PORT = 4000;
 
+app.use(express.static(path.join('.', 'public')));
+
 function loadPage(res, page) {
-    fs.readFile("./Webpages/" +  page + ".html", function(err, data) {
+    fs.readFile("./webpages/" +  page + ".html", function(err, data) {
         res.writeHead(200, {'Content-Type': 'text/html'});
         res.write(data);
         
